@@ -1,0 +1,123 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(35, 0, 90);
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .calculator_grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* min-height: 85vh; */
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+    background-color: #1e2935;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 20px 27px 10px -3px,
+      rgba(0, 0, 0, 0.2) 20px -3px 0px inset;
+  }
+  
+
+  .output {
+    grid-column: 1/-1;
+    background: #306b6b;
+    display: flex;
+    align-content: flex-end;
+    color: white;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 10px;
+    word-wrap: break-word;
+    margin: 15px;
+    /* color: #1e2935; */
+  }
+
+  .output .previous_operant {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: right;
+    word-wrap: break-word;
+    color: #1e2935;
+  }
+  
+  .output .current_operant {
+    color: rgba(255, 255, 255);
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: right;
+    color: #1e2935;
+  }
+
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  
+  
+.calculator_grid > button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    background-color: #1e2935;
+    color: rgb(207, 213, 213);
+  }
+
+  .calculator_grid > button.dot_btn {
+    font-weight: 900;
+  }
+  .calculator_grid > button#all-clear,
+  button#delete {
+    font-size: 1.1rem;
+  }
+  .calculator_grid > button#equals {
+    background-color: #253241;
+    border-radius: 50px 0 10px 0;
+  }
+
+  .calculator_grid > button.operator {
+    border-radius: 50%;
+    background-color: rgba(237, 235, 235, 0.824);
+    color: black;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: 500;
+  }
+
+  .calculator_grid > button.multi {
+    line-height: 50px;
+  }
+
+  .calculator_grid > button.percentage {
+    color: rgb(207, 213, 213);
+    background-color: unset;
+    font-weight: 400;
+    line-height: -10px;
+  }
+
+  .calculator_grid > button:hover {
+  color: rgb(249, 126, 3);
+}
